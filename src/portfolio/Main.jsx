@@ -3,7 +3,8 @@ import { Navbar, Container, Nav, Button, Alert } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhoneSquare, faEnvelope, faMapMarkerAlt, faCode, faDownload, faExternalLinkAlt, faEnvelopeOpenText, faDirections } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faGithub, faTelegramPlane, faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com'
+import Nik from '../pics/nik.png'
 
 export default function Main() {
   const [bg, setBg] = useState("transparent")
@@ -86,7 +87,7 @@ export default function Main() {
     })
   }, [])
   return (
-    <div >
+    <div>
       <Container fluid style={{height: "100vh"}} className="home" id="home">
       <Navbar collapseOnSelect expand="lg" style={{backgroundColor: bg}} className="primary" fixed="top">
         <Container>
@@ -102,37 +103,53 @@ export default function Main() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div className="row main flex-md-row-reverse justify-content-between top-pad">
-        <div className="col-md-6 center-head">
-          <img src="portfolio.png" alt="Portfolio" />
+      
+      <div className="row main flex-row-reverse">
+        <div className="col-md-6 d-flex justify-content-center">
+          <div><img className="image" src={Nik} alt="Portfolio" /></div>
         </div>
-        <div className="col-md-6 pt-0 pt-md-5 center-head">
-          <div className="align-left">
-            <div className="badge">Hello I'm</div>
-            <div className="heading pb-3">{`<Nikhil/>`}</div>
-            <div className="info p-1">
-              <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faCode}/>
-              <div className="inline pad">Full Stack Developer</div>
+        {/* <div className="col-md-6 center-head">
+          <div class="container1 body2">
+            <div class="container__image">
+              <div class="container__info container__author">Photo by <a class="link" href="https://instagram.com/silvia.diaconescu" target="_blank">Silvia Diaconescu</a></div>
+              <div class="container__info container__location">Geneva Lake Switzerland </div>
             </div>
-            <div className="info p-1">
-              <a href="mailto: 2019198@iiitdmj.ac.in">
-                <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faEnvelope}/>
-                <div className="inline pad">2019198@iiitdmj.ac.in</div>
-              </a>
+          </div>
+        </div> */}
+        <div className="col-md-6 d-flex flex-column justify-content-end">
+          <div>
+            <div className="d-flex badge-head">
+              <div className="badge">Hello I'm</div>
+              <div>{}</div>
             </div>
-            <div className="info p-1">
-              <a href="callto: +919438002199" >
-                <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faPhoneSquare}/>
-                <div className="inline pad">+919438002199</div>
-              </a>
+            <div className="heading">{`<Nikhil/>`}</div>
+            <div className="d-flex flex-column justify-content-center">
+              <div className="info p-1">
+                <div className="inline"><FontAwesomeIcon size="lg" flip="horizontal" icon={faCode}/></div>
+                <div className="inline pad">Full Stack Developer</div>
+              </div>
+              <div className="info p-1">
+                <a href="mailto: 2019198@iiitdmj.ac.in">
+                  <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faEnvelope}/>
+                  <div className="inline pad">2019198@iiitdmj.ac.in</div>
+                </a>
+              </div>
+              <div className="info p-1">
+                <a href="callto: +919438002199" >
+                  <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faPhoneSquare}/>
+                  <div className="inline pad">+919438002199</div>
+                </a>
+              </div>
+              <div className="info p-1">
+                <a href="https://maps.app.goo.gl/bbVJbHWz8GJmtTNv8">
+                  <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faMapMarkerAlt}/>
+                  <div className="inline pad" style={{textOverflow: "ellipsis"}}>Near Hotel 180 degree, Jeypore</div>
+                </a>
+              </div>
             </div>
-            <div className="info p-1">
-              <a href="https://maps.app.goo.gl/bbVJbHWz8GJmtTNv8">
-                <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faMapMarkerAlt}/>
-                <div className="inline pad">Near Hotel 180 degree, Jeypore</div>
-              </a>
-            </div>
-            <div className="info pt-5">
+          </div>
+          <div className="d-flex justify-content-start pt-0 pt-md-5" >
+            <div className="info">
               <a role="button" className="btn btn-primary reference" href="https://instagram.com/_niku_419">
                 <FontAwesomeIcon size="2x" icon={faInstagram}/>
               </a>
@@ -153,16 +170,16 @@ export default function Main() {
         </div>
       </div>
       </Container>
-      <Container fluid id="about" className="pt-0 pt-md-3 about">
-      <h1 className="heading heading-about pt-0 pt-md-5" style={{color:"#141b45"}}>About me</h1>
-      <div className="row main justify-content-between">
+      <Container fluid id="about" className="about" style={{height: "100vh"}}>
+      <h1 className="heading heading-about" style={{color:"#141b45"}}>About me</h1>
+      <div className="row justify-content-between">
         <div className="col-md-6 center-head">
           <img className="image img-fluid" src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/ab-img.png" alt="programmer"/>
         </div>
-        <div className="col-md-6 center-head pt-4">
+        <div className="col-md-6 center-head pt-2">
           <div style={{color: "#373737"}}>Hello! I'am Nikhil, full stack developer from India. few somw lines about me... and i am good at</div>
           <div className="d-flex flex-wrap justify-content-center pt-2 pt-md-4">
-            {['Javascript','CSS','React','Firebase','NodeJS','MongoDB','GraphQL','Bootstrap'].map((value, index) => (
+            {['Javascript','CSS','React','Firebase','NodeJS','MongoDB','Netlify','Bootstrap'].map((value, index) => (
               <div key={index} className="p-2"><Button variant="outline-primary">{value}</Button></div>
             ))}
           </div>
@@ -216,7 +233,7 @@ export default function Main() {
         <div className="state mt-5 d-flex justify-content-center">
           <div><h1 className="heading" style={{color:"#141b45"}}>Contact me</h1></div>
         </div>
-        <div className="col-md-6 center-head d-md-flex d-xs-none d-sm-none">
+        <div className="col-md-6 center-head breakpoint">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none"className="svg">
           <g id="Image">
             <g id="g14">
@@ -526,7 +543,7 @@ export default function Main() {
             </Alert>}
             <FontAwesomeIcon className="pt-2" icon={faEnvelopeOpenText} size="4x" color="#b59d5a"/>
             <div className="form px-2 pt-4" >
-              <form onSubmit={sendEmail}>
+              <form onSubmit={sendEmail} className="d-flex">
                 <input type="hidden" name="contact_number" />
                 <input className="p-2" placeholder='Your Name' type="text" name="user_name" value={name} onChange={(e) => setName(e.target.value)} required/>
                 <input className="p-2" type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>

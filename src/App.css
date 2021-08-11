@@ -7,6 +7,9 @@
 .navbar{
   border-bottom: 2px solid var(--headingTextColor) !important;
 }
+html, body {
+  height:100%;
+}
 .home:after {
   content:'';
   background: url('/src/pics/herko.jpg') no-repeat center center fixed;
@@ -19,7 +22,7 @@
   width:100%;
   height:100%;
   z-index:-1;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 .skills {
   content:'';
@@ -81,7 +84,6 @@ a:hover::before {
   );
   font-size: 1.5rem !important;
   letter-spacing: 0.09rem;
-  padding: 0.02rem;
   border-radius: 20px 30px 30px 5px !important;
 }
 .CV{
@@ -101,9 +103,6 @@ a:hover::before {
 .reference:hover{
   background-color: var(--textColor) !important;
 }
-.align-left{
-  padding-left: 5rem !important;
-}
 .btn-primary{
   background-color: transparent !important;
   border-color: transparent !important;
@@ -117,7 +116,7 @@ a:hover::before {
   text-align: center;
   font-family: 'Times New Roman', serif;
   letter-spacing: 0.5rem;
-  font-size: 5rem;
+  font-size: 8vw;
   color: transparent;
   font-weight: bold;
   font-stretch: ultra-condensed;
@@ -133,16 +132,15 @@ a:hover::before {
   );
   -webkit-background-clip: text;
 }
-.main{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 .center-head{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.center-home{
+  display: grid !important;
+  place-items: middle !important;
 }
 .center-head-1{
   display: flex;
@@ -163,9 +161,46 @@ a:hover::before {
     background-color: var(--backgroundColor) !important;
   }
   .image{
-    /* width: auto; */
-    height: 15rem !important;
+    overflow: hidden !important;
+    object-fit: cover !important;
     background-repeat: no-repeat !important;
+    background-size:cover;
+    max-width: 240px !important;
+    height: auto;
+    border-radius: 50%;
+  }
+  .badge-head{
+    justify-content: center !important;
+  }
+}
+.image{
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  background-repeat: no-repeat !important;
+  overflow: hidden !important;
+  object-fit: cover !important;
+  background-size:cover;
+  transition: ease-in-out .3s;
+}
+@media (min-width : 768px){
+  .main{
+    /* display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important; */
+    /* display: grid !important;
+    place-items: center !important; */
+    /* position: absolute; */
+    top: 50%;
+    transform: translate(0, 40%);
+  }
+  .badge-head{
+    justify-content: space-around !important;
+  }
+}
+@media (max-width : 768px){
+  .breakpoint{
+    display: none !important;
   }
 }
 .top-pad {
@@ -177,11 +212,6 @@ a:hover::before {
 }
 .navbar-toggler-icon{
   color: var(--headingTextColor) !important;
-}
-.image{
-  width: auto;
-  height: 10rem;
-  background-repeat: no-repeat !important;
 }
 .about{
   background: linear-gradient(
