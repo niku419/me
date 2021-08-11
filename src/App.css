@@ -207,6 +207,10 @@ a:hover::before {
     justify-content: space-around !important;
   }
 }
+.main-contact{
+  top: 50%;
+  transform: translate(0, 50%)
+}
 @media (max-width : 768px){
   .breakpoint{
     display: none !important;
@@ -603,6 +607,7 @@ input {
   width: -moz-calc(100% - 15px);
   width: calc(100% - 15px); */
   margin-bottom: 10px;
+  width: 50vh;
 }
 .panel input[type='text'][placeholder], .panel textarea[type="text"][placeholder], .panel input[type="email"][placeholder] {
   color: var(--backgroundColor);
@@ -674,4 +679,23 @@ h1.sixth:hover:after {
   color: var(--backgroundColor) !important;
   border-color: var(--backgroundColor) !important;
   /* border: 2rem !important; */
+}
+/* .form-control{
+  width: auto !important;
+} */
+.break{
+  justify-content: center;
+}
+/* @media (min-width : 405px){
+  .break{
+    width: 12rem !important;
+  }
+} */
+@media (max-width : 405px){
+  .panel input[type='text'], .panel textarea[type="text"], .panel input[type="email"] {
+    width: 15rem !important;
+  }
+}
+.contact-me{
+  font-size: 800em;
 }

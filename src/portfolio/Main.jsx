@@ -104,7 +104,7 @@ export default function Main() {
         </Container>
       </Navbar>
       
-      <div className="row main flex-row-reverse">
+      <div className="main d-flex flex-column flex-col-reverse justify-content-center flex-md-row flex-md-row-reverse">
         <div className="col-md-6 d-flex justify-content-center">
           <div><img className="image" src={Nik} alt="Portfolio" /></div>
         </div>
@@ -116,62 +116,60 @@ export default function Main() {
             </div>
           </div>
         </div> */}
-        <div className="col-md-6 d-flex flex-column justify-content-end">
+        <div className="col-md-6 d-flex flex-column">
           <div>
-            <div className="d-flex badge-head">
-              <div className="badge">Hello I'm</div>
-              <div>{}</div>
-            </div>
-            <div className="heading">{`<Nikhil/>`}</div>
-            <div className="d-flex flex-column justify-content-center">
-              <div className="info p-1">
-                <div className="inline"><FontAwesomeIcon size="lg" flip="horizontal" icon={faCode}/></div>
-                <div className="inline pad">Full Stack Developer</div>
-              </div>
-              <div className="info p-1">
-                <a href="mailto: 2019198@iiitdmj.ac.in">
-                  <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faEnvelope}/>
-                  <div className="inline pad">2019198@iiitdmj.ac.in</div>
-                </a>
-              </div>
-              <div className="info p-1">
-                <a href="callto: +919438002199" >
-                  <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faPhoneSquare}/>
-                  <div className="inline pad">+919438002199</div>
-                </a>
-              </div>
-              <div className="info p-1">
-                <a href="https://maps.app.goo.gl/bbVJbHWz8GJmtTNv8">
-                  <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faMapMarkerAlt}/>
-                  <div className="inline pad" style={{textOverflow: "ellipsis"}}>Near Hotel 180 degree, Jeypore</div>
-                </a>
-              </div>
-            </div>
+          <div className="d-flex badge-head">
+            <div className="badge">Hello I'm</div>
+            <div>{}</div>
           </div>
-          <div className="d-flex justify-content-start pt-0 pt-md-5" >
-            <div className="info">
-              <a role="button" className="btn btn-primary reference" href="https://instagram.com/_niku_419">
-                <FontAwesomeIcon size="2x" icon={faInstagram}/>
+          <div className="heading">{`<Nikhil/>`}</div>
+          <div className="d-flex flex-column pb-3">
+            <span className="info p-1 d-flex justify-content-center inline">
+              <span className="ie"><FontAwesomeIcon size="lg" flip="horizontal" icon={faCode}/></span>
+              <span className=" pad">Full Stack Developer</span>
+            </span>
+            <div className="info p-1 d-flex  justify-content-center">
+              <a href="mailto: 2019198@iiitdmj.ac.in">
+                <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faEnvelope}/>
+                <div className="inline pad">2019198@iiitdmj.ac.in</div>
               </a>
-              <a role="button" className="btn btn-primary reference" href="https://github.com/niku419">
-                <FontAwesomeIcon size="2x" icon={faGithub}/>
+            </div>
+            <div className="info p-1 d-flex  justify-content-center">
+              <a href="callto: +919438002199" >
+                <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faPhoneSquare}/>
+                <div className="inline pad">+919438002199</div>
               </a>
-              <a role="button" className="btn btn-primary reference" href="https://linkedin.com/niku_419">
-                <FontAwesomeIcon size="2x" icon={faLinkedinIn}/>
-              </a>
-              <a role="button" className="btn btn-primary reference" href="https://t.me/Niku_419">
-                <FontAwesomeIcon size="2x" icon={faTelegramPlane}/>
-              </a>
-              <a role="button" className="btn btn-primary reference" href="https://www.facebook.com/profile.php?id=100069976086066">
-                <FontAwesomeIcon size="2x" icon={faFacebookF}/>
+            </div>
+            <div className="info p-1 d-flex  justify-content-center">
+              <a href="https://maps.app.goo.gl/bbVJbHWz8GJmtTNv8">
+                <FontAwesomeIcon className="inline" size="lg" flip="horizontal" icon={faMapMarkerAlt}/>
+                <div className="inline pad" style={{textOverflow: "ellipsis"}}>Near Hotel 180 degree, Jeypore</div>
               </a>
             </div>
           </div>
+        </div>    
+        <div className="d-flex justify-content-md-center justify-content-center pt-0 pt-md-5 flex-wrap">
+          <a role="button" className="btn btn-primary reference" href="https://instagram.com/_niku_419">
+            <FontAwesomeIcon size="2x" icon={faInstagram}/>
+          </a>
+          <a role="button" className="btn btn-primary reference" href="https://github.com/niku419">
+            <FontAwesomeIcon size="2x" icon={faGithub}/>
+          </a>
+          <a role="button" className="btn btn-primary reference" href="https://linkedin.com/niku_419">
+            <FontAwesomeIcon size="2x" icon={faLinkedinIn}/>
+          </a>
+          <a role="button" className="btn btn-primary reference" href="https://t.me/Niku_419">
+            <FontAwesomeIcon size="2x" icon={faTelegramPlane}/>
+          </a>
+          <a role="button" className="btn btn-primary reference" href="https://www.facebook.com/profile.php?id=100069976086066">
+            <FontAwesomeIcon size="2x" icon={faFacebookF}/>
+          </a>  
+        </div>
         </div>
       </div>
       </Container>
       <Container fluid id="about" className="about" style={{height: "100vh"}}>
-      <h1 className="heading heading-about" style={{color:"#141b45"}}>About me</h1>
+      <div><h1 className="heading-about heading" style={{color:"#141b45"}}>About me</h1></div>
       <div className="row justify-content-between">
         <div className="col-md-6 center-head">
           <img className="image-about img-fluid" src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/ab-img.png" alt="programmer"/>
@@ -230,8 +228,8 @@ export default function Main() {
         {/* SKILLS */}
       </Container >
       <Container fluid id="contact" className="d-flex justify-content-between row m-0" style={{height: "100vh"}}>
-        <div className="state mt-5 d-flex justify-content-center">
-          <div><h1 className="heading" style={{color:"#141b45"}}>Contact me</h1></div>
+        <div className="d-flex justify-content-center main-contact">
+          <div className="contact-me center-head"><h1 style={{color:"#141b45"}}>Contact me</h1></div>
         </div>
         <div className="col-md-6 center-head breakpoint">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none"className="svg">
@@ -542,28 +540,30 @@ export default function Main() {
               </div>
             </Alert>}
             <FontAwesomeIcon className="pt-2" icon={faEnvelopeOpenText} size="4x" color="#b59d5a"/>
-            <div className="form px-2 pt-4" >
-              <form onSubmit={sendEmail} className="d-flex flex-column justify-content-center">
+            <div className="px-2 pt-4" >
+              <Form onSubmit={sendEmail} className="d-flex flex-column" >
                 <div><input type="hidden" name="contact_number" /></div>
-                <div className="p-1"><Form.Control className="p-2" placeholder='Your Name' type="text" name="user_name" value={name} onChange={(e) => setName(e.target.value)} required/></div>
-                <div className="p-1"><Form.Control className="p-2" type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required/></div>
-                <div className="p-1"><Form.Control as="textarea" className="p-2" name="message" placeholder="Your message..." type="text" value={message} onChange={(e) => setMessage(e.target.value)} required/></div>
-                <Button className="p-1" variant="outline-dark" type="submit">Send message</Button>
-              </form>
+                <div className="p-1 d-flex justify-content-center ">  
+                  <div><Form.Control className="p-2 px-2 break" placeholder='Your Name' type="text" name="user_name" value={name} onChange={(e) => setName(e.target.value)} required/>
+                  </div><div>{' '}</div>
+                </div>
+                <div className="p-1 d-flex justify-content-center break">
+                  <div><Form.Control className="p-2 px-2" type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                  </div><div>{' '}</div>
+                </div>
+                <div className="p-1 d-flex justify-content-center break">
+                  <div><Form.Control as="textarea" className="p-2 px-2" name="message" placeholder="Your message..." type="text" value={message} onChange={(e) => setMessage(e.target.value)} required/>
+                  </div><div>{' '}</div>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <div><Button className="p-1 px-2" variant="outline-dark" type="submit">Send message</Button>
+                  </div><div>{' '}</div>
+                </div>
+              </Form>
             </div>
           </div>
         </div>
       </Container>
-      {/* <Container fluid id="what-i-do" className="pt-5 center-head">
-        <div className="main justify-content-between ">
-          <div className="col-md-6 center-head">
-            <h1 className="heading">Web Developer</h1>   
-          </div>
-          <div className="col-md-6 center-head">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-          </div>
-        </div>
-      </Container> */}
     </div>
   )
 }
