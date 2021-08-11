@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Navbar, Container, Nav, Button, Alert } from 'react-bootstrap'
+import { Navbar, Container, Nav, Button, Alert, Form } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhoneSquare, faEnvelope, faMapMarkerAlt, faCode, faDownload, faExternalLinkAlt, faEnvelopeOpenText, faDirections } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faGithub, faTelegramPlane, faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
@@ -174,7 +174,7 @@ export default function Main() {
       <h1 className="heading heading-about" style={{color:"#141b45"}}>About me</h1>
       <div className="row justify-content-between">
         <div className="col-md-6 center-head">
-          <img className="image img-fluid" src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/ab-img.png" alt="programmer"/>
+          <img className="image-about img-fluid" src="http://cvresumetemplate.com/maha-personal-cv-resume-html-template/assets/images/ab-img.png" alt="programmer"/>
         </div>
         <div className="col-md-6 center-head pt-2">
           <div style={{color: "#373737"}}>Hello! I'am Nikhil, full stack developer from India. few somw lines about me... and i am good at</div>
@@ -185,7 +185,7 @@ export default function Main() {
           </div>
         </div>
         <div className="d-flex justify-content-center pt-2 pt-md-4 pb-2">
-          <a className="CV btn" role="button" href="https://google.com" style={{backgroundColor: "#141b45"}}>
+          <a className="CV btn" role="button" href="https://github.com/niku419" style={{backgroundColor: "#141b45"}}>
             <div className="inline pad">My CV template</div>{' '}
             <FontAwesomeIcon className="inline" flip="horizontal" icon={faDownload}/>
           </a>
@@ -531,7 +531,7 @@ export default function Main() {
       </svg>
         </div>
         <div className="col-md-6 center-head-1">
-          <div className="panel total-body pb-3">
+          <div className="panel total-body pb-2 mb-3">
             {show &&
             <Alert variant={variant} className="p-2 mt-3 mx-3" onClose={() => setShow(false)}>
               <div className="d-flex justify-content-between">
@@ -543,12 +543,12 @@ export default function Main() {
             </Alert>}
             <FontAwesomeIcon className="pt-2" icon={faEnvelopeOpenText} size="4x" color="#b59d5a"/>
             <div className="form px-2 pt-4" >
-              <form onSubmit={sendEmail} className="d-flex">
-                <input type="hidden" name="contact_number" />
-                <input className="p-2" placeholder='Your Name' type="text" name="user_name" value={name} onChange={(e) => setName(e.target.value)} required/>
-                <input className="p-2" type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-                <textarea className="p-2" name="message" placeholder="Your message..." type="text" value={message} onChange={(e) => setMessage(e.target.value)} required/>
-                <Button variant="outline-dark" type="submit">Send message</Button>
+              <form onSubmit={sendEmail} className="d-flex flex-column justify-content-center">
+                <div><input type="hidden" name="contact_number" /></div>
+                <div className="p-1"><Form.Control className="p-2" placeholder='Your Name' type="text" name="user_name" value={name} onChange={(e) => setName(e.target.value)} required/></div>
+                <div className="p-1"><Form.Control className="p-2" type="email" name="user_email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required/></div>
+                <div className="p-1"><Form.Control as="textarea" className="p-2" name="message" placeholder="Your message..." type="text" value={message} onChange={(e) => setMessage(e.target.value)} required/></div>
+                <Button className="p-1" variant="outline-dark" type="submit">Send message</Button>
               </form>
             </div>
           </div>
