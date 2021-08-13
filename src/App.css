@@ -3,7 +3,6 @@
   --headingTextColor: #b59d5a !important;
   --textColor: white !important;
 }
-/* #141b45 */
 .navbar{
   border-bottom: 2px solid var(--headingTextColor) !important;
 }
@@ -30,13 +29,10 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* position: absolute; */
   top:0px;
   left: 0px;
   width:100%;
   height:100%;
-  /* z-index:-1; */
-  /* opacity: 0.6; */
 }
 body{
   background-color: var(--backgroundColor) !important;
@@ -94,9 +90,6 @@ a:hover::before {
   color: #cb9b51 !important;
   border-radius: 30px 30px 30px 30px !important;
 }
-/* .btn-primary{
-  background-color: rgb(13,7,107) !important;
-} */
 .projects{
   background: #fff !important;
 }
@@ -210,12 +203,6 @@ a:hover::before {
 }
 @media (min-width : 768px){
   .main{
-    /* display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important; */
-    /* display: grid !important;
-    place-items: center !important; */
-    /* position: absolute; */
     top: 50%;
     transform: translate(0, 40%);
   }
@@ -295,11 +282,10 @@ a:hover::before {
   font-family: "Exo 2", sans-serif;
   color: #333;
 }
-
 .card{
   position: relative;
-  width: 315px; /* Remove for full width */
-  min-height: 360px; /* Remove for full width */
+  width: 315px; 
+  min-height: 360px; 
   margin:30px auto;
 }
 .card-header{
@@ -316,7 +302,6 @@ a:hover::before {
   height: 100%;
   background: linear-gradient(to top, #cb9b51, rgb(246, 226, 122, 0.1));
 }
-
 .card-header-bar{
   position: absolute;
   top:0;
@@ -324,7 +309,6 @@ a:hover::before {
   z-index: 1;
   width: 100%;
 }
-
 .sr-only{
   position: absolute;
   width: 1px;
@@ -351,7 +335,6 @@ a:hover::before {
   margin-top:10px;
   float: left;
 }
-
 svg .polygon{
   fill: var(--backgroundColor);
 }
@@ -363,7 +346,6 @@ svg .polygon{
   right:0;
   left:0;
 }
-
 .btn-follow{
   position: absolute;
   top: -15px;
@@ -374,7 +356,6 @@ svg .polygon{
   border-radius:100%;
   box-shadow: 0 10px 15px rgba(110,221,235, .53);
 }
-
 .btn-follow:after{
   content: '';
   position:absolute;
@@ -385,27 +366,23 @@ svg .polygon{
   top:50%;
   transform: translate(-50%, -50%);
 }
-
 .card-body{
   text-align:center;
   padding-left: 10px;
   background-color: var(--backgroundColor) !important;
 }
-
 .name{
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0 auto;
 }
-
 .job-title{
   font-size: 14px;
   font-weight: 300;
   margin-top: 5px;
   color: #919191;
 }
-
 .bio{
   font-size: 14px;
   color: #7B7B7B;
