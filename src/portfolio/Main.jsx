@@ -7,6 +7,7 @@ import emailjs from 'emailjs-com'
 import Nik from '../pics/nik.png'
 import Loading from './Loading'
 import { Fade, Slide, Flip } from 'react-reveal'
+import TypeWriterEffect from 'react-typewriter-effect'
 
 export default function Main() {
   const [bg, setBg] = useState("transparent")
@@ -21,10 +22,12 @@ export default function Main() {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      setLoading(true)
-    }, 3000);
+      if(document.readyState === 'complete'){
+        setLoading(false)
+      }
+    }, 3800);
   }, [])
-  
+
   function sendEmail(e) {
     e.preventDefault();
     emailjs.sendForm('service_rnqs2eh', 'template_fnka29m', e.target, 'user_3xPOwXWxd8NFqX1ltfkao')
@@ -131,7 +134,7 @@ export default function Main() {
                     <div>{}</div>
                   </div>
                 </Fade>
-                <Fade bottom><div className="heading">{`<Nikhil/>`}</div></Fade>
+                <Fade bottom><div className="heading">{`Nikhil`}</div></Fade>
                 <Fade top>
                   <div className="d-flex flex-column pb-3">
                     <div className="info p-1 d-flex justify-content-center inline">
@@ -191,7 +194,14 @@ export default function Main() {
             </div>                
             <div className="col-md-6 center-head pt-2 d-flex justify-content-between flex-column">
               <Slide right>
-                <div style={{color: "#373737"}}>Hello! I'am Nikhil, full stack developer and freelancer from India</div>
+              <TypeWriterEffect
+                  textStyle={{ fontFamily: 'Red Hat Display', color: "#373737",fontWeight: 500, fontSize: '1.5em' }}
+                  startDelay={100}
+                  cursorColor="black"
+                  text="Hello! I'am Nikhil, full stack developer and freelancer from India..."
+                  typeSpeed={100}
+                />
+                {/* <div style={{color: "#373737"}}>Hello! I'am Nikhil, full stack developer and freelancer from India</div> */}
                 <div className="d-flex flex-wrap justify-content-center pt-2 pt-md-4">
                   {['Javascript','CSS','React','Firebase','NodeJS','MongoDB','Netlify','Bootstrap'].map((value, index) => (
                     <div key={index} className="p-2"><Button variant="outline-primary">{value}</Button></div>

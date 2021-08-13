@@ -184,7 +184,7 @@ a:hover::before {
     object-fit: cover !important;
     background-repeat: no-repeat !important;
     background-size:cover;
-    max-width: 300px !important;
+    max-width: 280px !important;
     height: auto;
   }
   .badge-head{
@@ -692,24 +692,4 @@ h1.sixth:hover:after {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.niku {
-width:0px;
-animation: reveal 7s infinite;
-}
 
-/* .niku span {
-animation: slidein 7s infinite;
-} */
-@keyframes slidein {
-  0% { margin-left:-800px; }
-  20% { margin-left:-800px; }
-  35% { margin-left:0px; }
-  100% { margin-left:0px; }
-}
-@keyframes reveal {
-  0% {opacity:0;width:0px;}
-  20% {opacity:1;width:0px;}
-  30% {width:355px;}
-  80% {opacity:1;}
-  100% {opacity:0;width:355px;}
-}
