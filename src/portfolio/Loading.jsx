@@ -11,7 +11,7 @@ export default function Loading() {
     const action = setInterval(() => {
       dencrypt(values[i]);
       i = i === values.length - 1 ? 0 : i + 1;
-    }, 2000);
+    }, 2500);
     return () => clearInterval(action);
   }, []);
 

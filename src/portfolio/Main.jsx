@@ -25,7 +25,7 @@ export default function Main() {
       if(document.readyState === 'complete'){
         setLoading(false)
       }
-    }, 3800);
+    }, 4200);
   }, [])
 
   function sendEmail(e) {
@@ -195,7 +195,7 @@ export default function Main() {
             <div className="col-md-6 center-head pt-2 d-flex justify-content-between flex-column">
               <Slide right>
               <TypeWriterEffect
-                  textStyle={{ fontFamily: 'Red Hat Display', color: "#373737",fontWeight: 500, fontSize: '1.5em' }}
+                  textStyle={{ fontFamily: 'Red Hat Display', color: "#141b45",fontWeight: 300, fontSize: '1.2em' }}
                   startDelay={100}
                   cursorColor="black"
                   text="Hello! I'am Nikhil, full stack developer and freelancer from India..."

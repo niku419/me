@@ -68,20 +68,7 @@ a:hover {
 a:hover::before {
   transform: scaleX(1);
 }
-.badge{
-  background-image: linear-gradient(
-    to right,
-    #462523 0,
-    #cb9b51 22%,
-    #f6e27a 45%,
-    #f6e27a 55%,
-    #cb9b51 78%,
-    #462523 100%
-  );
-  font-size: 1.5rem !important;
-  letter-spacing: 0.09rem;
-  border-radius: 20px 30px 30px 5px !important;
-}
+
 .CV{
   letter-spacing: 0.09rem;
   padding: 0.02rem;
@@ -99,11 +86,27 @@ a:hover::before {
 .btn-primary{
   background-color: transparent !important;
   border-color: transparent !important;
-  margin-right: 0.5rem !important;
+  margin-right: 1.5rem !important;
   padding-right: 0.5rem !important;
   padding-left: 0.5rem !important;
   padding-top: 0.4 !important;
   padding-bottom: 0.4rem !important;
+}
+.badge{
+  background-image: linear-gradient(
+    to right,
+    #462523 0,
+    #cb9b51 22%,
+    #f6e27a 45%,
+    
+    #f6e27a 55%,
+    #cb9b51 78%,
+    #462523 100%
+  );
+  
+  font-size: 1.3em;
+  letter-spacing: 0.09rem;
+  border-radius: 20px 30px 30px 5px !important;
 }
 .heading{
   text-align: center;
@@ -206,9 +209,6 @@ a:hover::before {
     top: 50%;
     transform: translate(0, 40%);
   }
-  .home{
-    height: 100vh !important;
-  }
   .badge-head{
     justify-content: space-around !important;
   }
@@ -217,12 +217,18 @@ a:hover::before {
   top: 50%;
   transform: translate(0, 50%)
 }
+.home{
+  height: 100vh !important;
+}
 .about-main{
   transform: translate(0,30%);
 }
 @media (max-width : 768px){
   .breakpoint{
     display: none !important;
+  }
+  .badge{
+    font-size: 1rem !important;
   }
 }
 .top-pad {
